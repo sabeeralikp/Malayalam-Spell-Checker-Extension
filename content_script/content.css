@@ -1,0 +1,192 @@
+.mainContainer {
+  position: fixed;
+  top: 64px;
+  right: 24px;
+  z-index: 1000000;
+}
+
+.spellCheckerRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.buttonContainer {
+  display: flex;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.copyimg {
+  width: 19px;
+}
+
+#copyTextButton {
+  background-color: rgba(4, 26, 40, 0.35);
+  border-radius: 50%;
+  border: 2px solid rgba(4, 26, 40, 0.35);
+  padding: 4px 4px 0px 4px;
+  display: none;
+  cursor: pointer;
+  margin-right: 4px;
+  z-index: 100000;
+}
+
+#selectionButton {
+  width: fit-content;
+  height: fit-content;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.extensionLogo {
+  width: 32px;
+}
+
+#resultBox {
+  display: none;
+  width: 300px;
+  min-height: 100px;
+  max-height: 300px;
+  overflow: auto;
+  z-index: 1000;
+  padding: 8px 8px;
+  background: rgba(4, 26, 40, 0.5);
+  box-shadow: 0 4px 16px 0 rgba(78, 79, 87, 0.2);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(4, 26, 40, 0.034);
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+.incorrect {
+  text-decoration: underline solid rgb(214, 103, 103) 1.5px;
+  color: rgb(228, 107, 107);
+  position: relative;
+}
+.correct {
+  color: white;
+  text-decoration: underline dashed rgb(20, 20, 231) 1.5px;
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+#suggestionsBox {
+  display: none;
+  width: fit-content;
+  min-height: 0px;
+  max-height: 300px;
+  overflow: auto;
+  cursor: pointer;
+  z-index: 1000;
+  background: rgba(14, 53, 71, 0.5);
+  box-shadow: 0 4px 16px 0 rgba(78, 79, 87, 0.2);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  margin-left: 8px;
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 20px;
+}
+#suggestionsBox .changeText {
+  padding: 4px 8px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.171);
+}
+/** ======================================================================== **/
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+/** =============================================================================== **/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.534);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(4, 26, 40, 1);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(4, 26, 40);
+}
